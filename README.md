@@ -38,21 +38,19 @@ With Express 4.1 I have not tried formidable, flowJS or parted and could not get
 ##Left to Discover
 This is just a basic file upload. I have come across 'imagemagick' and 'easyimage' (which uses imagemagick) image processing packages but have 
 not got them working as yet. I would like to discover the definitive and most secure way of performing file uploads using Node and Angular. 
-In cases where the public are to upload images.
 
 Some or all of the following  functionality may be useful: 
-* client side validation - filter by MIMI type (e.g. only accept JPEG, PNG format) & ensure integrity
-* client side image processing possibly where the image size is altered and cropped before it is saved to the server.
-With mobile devices it may be best to do the image process server side?
-* The server would also need to validate the image/source 
+* client side validation - filter by MIME type & ensure integrity [FileAPI possibly](https://github.com/mailru/FileAPI)
+* client side image processing possibly where the image size is altered and cropped before it is saved to the server. [FileAPI possibly]
+* The server would also need to validate the image/source [Easyimage or Imagemagick or other method possibly]
 
-I would like to get a clear example of this. 
+I would like to get a clear example of best practice for this. 
 I would also like to investigate connect-busman in more depth to check out the full functionality available from it. 
-I would like to have a progress bar for large image uploads etc.
 
 
 I have also got working with NodeJS (using almost the same server.js) an extremely good file upload package by [Daniel Farid](https://github.com/danialfarid/angular-file-upload). A working example of this shall also be available on my GitHub.
 
+Daniel makes use of [FileAPI](https://github.com/mailru/FileAPI) for the image/file processing client side and has created what seems an excellent package.
 
 ## Motivation
 
@@ -64,7 +62,7 @@ Learning AngularJS and NodeJS. File uploading is functionality I require in a CR
 * run `npm install` (this installs all dependencies listed in project.json)
 * run `node server.js`
 
-A local express server will not be available on port 3030 [http://localhost:3030/]
+A local express server will now be available on port 3030 [http://localhost:3030/]
 
 ##
 
